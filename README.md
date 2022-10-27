@@ -1,16 +1,21 @@
 # bmi
 
-A simple Flutter project demonstrating how to theme your app.
+A simple Flutter project demonstrating how to theme your app and the use of Provider in managing your app theme state.
 
-## Getting Started
+## Goals for this app
 
-This project is a starting point for a Flutter application.
+* Show how to use provider for managing app state across widgets
+* Show how to access system theme state
+* Demonstrate how to switch between light and dark theme or using the system theme state
 
-A few resources to get you started if this is your first Flutter project:
+## app structure
+- lib/
+-- main.dart
+-- bmi_app.dart
+-- bmi_theme.dart
+-- models/
+--- app_state_manager.dart
+-- screens/
+--- bmi_screen.dart
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
