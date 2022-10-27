@@ -1,4 +1,4 @@
-import 'package:bmi/ui/bmi.dart';
+import 'package:bmi/screens/bmi_screen.dart';
 import 'package:bmi/bmi_app.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';

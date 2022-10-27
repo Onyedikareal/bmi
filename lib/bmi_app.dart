@@ -1,6 +1,6 @@
 import 'package:bmi/bmi_theme.dart';
-import 'package:bmi/ui/bmi.dart';
-import 'package:bmi/util/cache.dart';
+import 'package:bmi/screens/bmi_screen.dart';
+import 'package:bmi/models/app_state_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
