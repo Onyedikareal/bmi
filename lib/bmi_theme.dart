@@ -139,7 +139,7 @@ class BMITheme {
             foregroundColor: Colors.black,
             backgroundColor: Colors.pinkAccent,
             systemOverlayStyle: SystemUiOverlayStyle(
-                statusBarColor: Color(0xff1F88C1),
+                statusBarColor: Colors.pinkAccent,
                 statusBarBrightness: Brightness.light,
                 systemNavigationBarContrastEnforced: false,
                 systemNavigationBarColor: Color(0xff1F88C1))),

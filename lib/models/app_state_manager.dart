@@ -1,31 +1,21 @@
-import 'dart:convert';
-
 import 'package:flutter/cupertino.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+
+enum AppThemeState{
+  light,
+  dark,
+  system
+}
 
 class AppStateManager extends ChangeNotifier {
   static const appThemeState = 'appThemeState';
-  bool _isLightTheme = false;
+  AppThemeState _isLightTheme = AppThemeState.system;
 
-  bool get isLightTheme => _isLightTheme;
+  AppThemeState get isLightTheme => _isLightTheme;
 
-  set setAppThemeState(bool isLightTheme) {
+  set setAppThemeState(AppThemeState isLightTheme) {
     _isLightTheme = isLightTheme;
     notifyListeners();
   }
 
-  final SharedPreferences prefs;
-  AppStateManager({required this.prefs});
 
-  cacheAppThemeState({required bool? isLightTheme}) async {
-    if (isLightTheme == null) {
-      prefs.remove(appThemeState);
-    } else {
-      prefs.setBool(appThemeState, isLightTheme);
-    }
-  }
-
-  bool getCachedAppThemeState() {
-    return prefs.getBool(appThemeState) ?? false;
-  }
 }
