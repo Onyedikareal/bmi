@@ -14,11 +14,11 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   // This widget is the root of your application.
-  late final AppCache _appCache;
+  late final AppStateManager _appCache;
   @override
   void initState() {
     super.initState();
-    _appCache = AppCache(prefs: widget.prefs);
+    _appCache = AppStateManager(prefs: widget.prefs);
   }
 
   @override
