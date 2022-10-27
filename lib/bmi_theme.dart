@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 
 
-class OlevelgurusTheme {
+class BMITheme {
   static Color lightThemeTextColor = const Color(0xff4d4d4d);
   static Color darkThemeTextColor = const Color(0xfffefefe);
 
@@ -127,39 +127,23 @@ class OlevelgurusTheme {
   static ThemeData light() {
     return ThemeData(
         brightness: Brightness.light,
-        checkboxTheme: CheckboxThemeData(
-          fillColor: MaterialStateColor.resolveWith(
-            (states) {
-              return Colors.black;
-            },
-          ),
-        ),
         indicatorColor: const Color(0xff1F88C1),
-        secondaryHeaderColor: const Color(0xff4d4d4d),
         primaryColor: const Color(0xff1F88C1),
         primaryColorDark: const Color(0xff00374E),
         cardColor: const Color(0xfffdfdfd),
-        canvasColor: const Color(0xffefefef),
         backgroundColor: Colors.white,
         dialogBackgroundColor: Colors.white,
-        drawerTheme: drawerTheme,
         shadowColor: Colors.grey,
         scaffoldBackgroundColor: const Color(0xffFDFEFF),
         appBarTheme: const AppBarTheme(
             foregroundColor: Colors.black,
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.pinkAccent,
             systemOverlayStyle: SystemUiOverlayStyle(
                 statusBarColor: Color(0xff1F88C1),
                 statusBarBrightness: Brightness.light,
                 systemNavigationBarContrastEnforced: false,
                 systemNavigationBarColor: Color(0xff1F88C1))),
-        floatingActionButtonTheme: const FloatingActionButtonThemeData(
-          foregroundColor: Colors.white,
-          backgroundColor: Colors.black,
-        ),
-        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-            selectedItemColor: Color(0xff1F88C1),
-            backgroundColor: Color(0xffffffff)),
+        buttonTheme: const ButtonThemeData(colorScheme: ColorScheme.light(background: Colors.red)),
         primaryTextTheme: primaryTextThemeLight);
   }
 
@@ -169,24 +153,12 @@ class OlevelgurusTheme {
 
     return ThemeData(
         brightness: Brightness.dark,
-        checkboxTheme: CheckboxThemeData(
-          fillColor: MaterialStateColor.resolveWith(
-            (states) {
-              return Colors.black;
-            },
-          ),
-        ),
         indicatorColor: const Color(0xff1F88C1),
-        secondaryHeaderColor: const Color(0xff4d4d4d),
         primaryColor: const Color(0xff1F88C1),
         primaryColorDark: darkThemeColor,
         backgroundColor: darkThemeColor,
-        dialogBackgroundColor: darkCardColor,
-        canvasColor: darkCardColor,
         cardColor: darkCardColor,
-        drawerTheme: darkThemeDrawerTheme,
         scaffoldBackgroundColor: darkThemeColor,
-        shadowColor: Colors.black87,
         iconTheme: darkIconTheme,
         appBarTheme: AppBarTheme(
             foregroundColor: Colors.black,
@@ -196,13 +168,8 @@ class OlevelgurusTheme {
                 statusBarBrightness: Brightness.dark,
                 systemNavigationBarContrastEnforced: false,
                 systemNavigationBarColor:const Color(0xff1F88C1))),
-        floatingActionButtonTheme: const FloatingActionButtonThemeData(
-          foregroundColor: Colors.white,
-          backgroundColor: Colors.black,
-        ),
-        bottomNavigationBarTheme: BottomNavigationBarThemeData(
-            selectedItemColor:const Color(0xff29ABE2),
-            backgroundColor: darkCardColor),
+        
+        buttonTheme:const ButtonThemeData(colorScheme: ColorScheme.light(background: Colors.red)),
         primaryTextTheme: primaryTextThemeDark);
   }
 }
