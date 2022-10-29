@@ -60,50 +60,57 @@ class BMIState extends State<BMI> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: kToolbarHeight * 1.4,
-        title: Text(
-          'BMI',
-          style: theme.primaryTextTheme.headline2,
-        ),
-        backgroundColor: theme.appBarTheme.backgroundColor,
-        centerTitle: true,
-        actions: [
-          IconButton(
-              onPressed: () {
-                changeThemePopup(
-                    context: context,
-                    primaryTextTheme: theme.primaryTextTheme,
-                    isLightTheme: isLightTheme);
-              },
-              padding: const EdgeInsets.only(right: 16.0),
-              icon: lightMode
-                  ? Icon(
-                      Icons.dark_mode_outlined,
-                      color: theme.iconTheme.color,
-                    )
-                  : Icon(
-                      Icons.light_mode_outlined,
-                      color: theme.iconTheme.color,
-                    ))
-        ],
-      ),
-      backgroundColor: theme.scaffoldBackgroundColor,
-      body: GestureDetector(
-        onTap: () {
-          FocusScope.of(context).requestFocus(FocusNode());
+    return GestureDetector(
+      onTap: () {
+          FocusScope.of(context).unfocus();
         },
-        child: SingleChildScrollView(
+      child: Scaffold(
+        appBar: AppBar(
+          toolbarHeight: kToolbarHeight * 1.4,
+          title: Text(
+            'BMI',
+            style: theme.primaryTextTheme.headline2,
+          ),
+          backgroundColor: theme.appBarTheme.backgroundColor,
+          centerTitle: true,
+          actions: [
+            IconButton(
+                onPressed: () {
+                  changeThemePopup(
+                      context: context,
+                      primaryTextTheme: theme.primaryTextTheme,
+                      isLightTheme: isLightTheme);
+                },
+                padding: const EdgeInsets.only(right: 16.0),
+                icon: lightMode
+                    ? Icon(
+                        Icons.dark_mode_outlined,
+                        color: theme.iconTheme.color,
+                      )
+                    : Icon(
+                        Icons.light_mode_outlined,
+                        color: theme.iconTheme.color,
+                      ))
+          ],
+        ),
+        backgroundColor: theme.scaffoldBackgroundColor,
+        body: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              Center(
-                child: SizedBox(
-                  width: 130,
-                  height: 90,
-                  child: Image.asset('images/bmilogo.png'),
+              const SizedBox(height: 12,),
+               Container(
+                  
+                  padding: const EdgeInsets.all(8.0),
+                  decoration:const BoxDecoration(
+                    color:  Color(0xffafafaf),
+                    borderRadius: BorderRadius.all(Radius.circular(8.0)) ),
+                  child: SizedBox(
+                    width: 130,
+                    height: 90,
+                    child: Image.asset('images/bmilogo.png'),
+                  ),
                 ),
-              ),
+              
               Container(
                 margin: const EdgeInsets.all(5.0),
                 decoration: BoxDecoration(

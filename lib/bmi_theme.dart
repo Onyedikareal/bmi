@@ -127,13 +127,11 @@ class BMITheme {
   static ThemeData light() {
     return ThemeData(
         brightness: Brightness.light,
-        indicatorColor: const Color(0xff1F88C1),
         primaryColor: const Color(0xff1F88C1),
         primaryColorDark: const Color(0xff00374E),
-        cardColor: const Color(0xfffdfdfd),
+        cardColor: const Color(0xffefefef),
         backgroundColor: Colors.white,
         dialogBackgroundColor: Colors.white,
-        shadowColor: Colors.grey,
         scaffoldBackgroundColor: const Color(0xffFDFEFF),
         appBarTheme: const AppBarTheme(
             foregroundColor: Colors.black,
@@ -169,7 +167,7 @@ class BMITheme {
                 systemNavigationBarContrastEnforced: false,
                 systemNavigationBarColor:const Color(0xff1F88C1))),
         
-        buttonTheme:const ButtonThemeData(colorScheme: ColorScheme.light(background: Colors.red)),
+        buttonTheme:const ButtonThemeData(colorScheme: ColorScheme.light(background:  Color(0xff1F88C1))),
         primaryTextTheme: primaryTextThemeDark);
   }
 }
